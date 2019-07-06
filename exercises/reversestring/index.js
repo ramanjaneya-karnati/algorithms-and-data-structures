@@ -6,14 +6,21 @@
 //   reverse('hello') === 'olleh'
 //   reverse('Greetings!') === '!sgniteerG'
 
+
 function reverse(str) {
+    return str.split('').reduce((reversed, character)=>{
+        return character + reversed
+    }, '')
+}
+
+/*function reverse(str) {
     let reversed='';
 
    for(let character of str){
        reversed = character + reversed
    }
    return reversed;
-}
+}*/
 /*function reverse(str) {
     return str.splice().reverse().join();
 }*/
@@ -21,8 +28,3 @@ function reverse(str) {
 module.exports = reverse;
 
 
-//string
-//1. declare temp variable
-//2. use for of loop with temp variable in obj
-//3. s + ''
-// 4. se

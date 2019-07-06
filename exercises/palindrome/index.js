@@ -7,6 +7,19 @@
 //   palindrome("abba") === true
 //   palindrome("abcdefg") === false
 
-function palindrome(str) {}
+const palindrome = (str) => {
+    /*
+    1. split the string
+    2. take the each characters from last of the array
+    3. verify with original string
+     */
+
+    let palindrome ='';
+    for( let character of str){
+        palindrome = character  + palindrome
+    }
+    return palindrome  === str ? true: false
+
+}
 
 module.exports = palindrome;
